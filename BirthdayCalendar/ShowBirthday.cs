@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -15,23 +8,29 @@ namespace BirthdayCalendar
     {
         private int countPerson = 0;
         private string path = string.Empty;
-        public ShowBirthday(string path)
+        private MainFrame frame;
+
+        public ShowBirthday(MainFrame frame, string path)
         {
             InitializeComponent();
+            this.frame = frame;
             this.path = path;
+            frame.Hide();
             try
             {
                 XDocument xdoc = XDocument.Load(path);
                 foreach (XElement phoneElement in xdoc.Element("persons").Elements("person"))
                 {
-                    XAttribute nameAttribute = phoneElement.Attribute("name");
+                    XAttribute idAttribute = phoneElement.Attribute("id");
                     XElement dateElement = phoneElement.Element("date");
+                    XElement nameElement = phoneElement.Element("name");
 
-                    if (nameAttribute != null && dateElement != null)
+                    if (nameElement != null && dateElement != null)
                     {
                         dataGridView1.Rows.Add();
-                        dataGridView1.Rows[countPerson].Cells[1].Value = nameAttribute.Value;
-                        dataGridView1.Rows[countPerson].Cells[0].Value = dateElement.Value;
+                        dataGridView1.Rows[countPerson].Cells[1].Value = dateElement.Value;
+                        dataGridView1.Rows[countPerson].Cells[0].Value = idAttribute.Value;
+                        dataGridView1.Rows[countPerson].Cells[2].Value = nameElement.Value;
                     }
                     countPerson++;
                 }
@@ -46,6 +45,7 @@ namespace BirthdayCalendar
         private void button_back_Click(object sender, EventArgs e)
         {
             this.Close();
+            frame.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

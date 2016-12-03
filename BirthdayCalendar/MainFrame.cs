@@ -43,15 +43,15 @@ namespace BirthdayCalendar
                     switch (i)
                     {
                         case 0:
-                            ShowBirthday show = new ShowBirthday(path);
+                            ShowBirthday show = new ShowBirthday(this, path);
                             show.Show();
                             break;
                         case 1:
-                            AddBirthday add = new AddBirthday(path);
+                            AddBirthday add = new AddBirthday(this, path);
                             add.Show();
                             break;
                         case 2:
-                            UpdateForm update = new UpdateForm(path);
+                            UpdateForm update = new UpdateForm(this, path);
                             update.Show();
                             break;
                     }
@@ -66,6 +66,14 @@ namespace BirthdayCalendar
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        public string Path
+        {
+            get
+            {
+                return path;
+            }
         }
     }
 }

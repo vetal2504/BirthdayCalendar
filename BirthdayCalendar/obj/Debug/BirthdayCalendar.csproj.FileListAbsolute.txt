@@ -1,7 +1,6 @@
 D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\bin\Debug\BirthdayCalendar.exe.config
 D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\bin\Debug\BirthdayCalendar.exe
 D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\bin\Debug\BirthdayCalendar.pdb
-D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.csprojResolveAssemblyReference.cache
 D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.Properties.Resources.resources
 D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.csproj.GenerateResource.Cache
 D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.exe
@@ -10,3 +9,5 @@ D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\Birth
 D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.AddBirthday.resources
 D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.ShowBirthday.resources
 D:\visual studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.UpdateForm.resources
+D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.ShowFirstForm.resources
+D:\Visual Studio 2015\Projects\BirthdayCalendar\BirthdayCalendar\obj\Debug\BirthdayCalendar.csprojResolveAssemblyReference.cache

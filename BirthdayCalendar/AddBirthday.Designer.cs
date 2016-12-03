@@ -38,15 +38,17 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 15);
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(143, 23);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(193, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
             this.dateTimePicker1.TabIndex = 0;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 18);
+            this.label1.Location = new System.Drawing.Point(13, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 1;
@@ -54,8 +56,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 77);
+            this.label2.Location = new System.Drawing.Point(16, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 2;
@@ -63,14 +66,16 @@
             // 
             // fullName
             // 
-            this.fullName.Location = new System.Drawing.Point(143, 74);
+            this.fullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.fullName.Location = new System.Drawing.Point(143, 82);
             this.fullName.Name = "fullName";
-            this.fullName.Size = new System.Drawing.Size(193, 20);
+            this.fullName.Size = new System.Drawing.Size(194, 20);
             this.fullName.TabIndex = 3;
             // 
             // button_back
             // 
-            this.button_back.Location = new System.Drawing.Point(19, 123);
+            this.button_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button_back.Location = new System.Drawing.Point(19, 137);
             this.button_back.Name = "button_back";
             this.button_back.Size = new System.Drawing.Size(75, 23);
             this.button_back.TabIndex = 4;
@@ -80,7 +85,9 @@
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(268, 123);
+            this.button_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_add.AutoSize = true;
+            this.button_add.Location = new System.Drawing.Point(278, 143);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(75, 23);
             this.button_add.TabIndex = 5;
@@ -92,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 162);
+            this.ClientSize = new System.Drawing.Size(361, 175);
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.fullName);

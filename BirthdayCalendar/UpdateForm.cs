@@ -14,10 +14,22 @@ namespace BirthdayCalendar
     public partial class UpdateForm : Form
     {
         private string path = String.Empty;
-        public UpdateForm(string path)
+        private MainFrame frame;
+        public UpdateForm(MainFrame frame, string path)
         {
             InitializeComponent();
+            this.frame = frame;
             this.path = path;
+            frame.Hide();
+
+            XDocument xdoc = XDocument.Load(path);
+            XElement root = xdoc.Element("persons");
+
+            foreach (XElement xe in root.Elements("person").ToList())
+            {
+                fullName.Items.Add(xe.Element("name").Value);
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,9 +44,9 @@ namespace BirthdayCalendar
 
             foreach (XElement xe in root.Elements("person").ToList())
             {
-                if (String.Compare(xe.Attribute("name").Value, fullName.Text) == 0)
+                if (String.Compare(xe.Element("name").Value, fullName.Text) == 0)
                 {
-                    xe.Attribute("name").Value = newFullName.Text;
+                    xe.Element("name").Value = newFullName.Text;
 
                     dateTimePicker1.Format = DateTimePickerFormat.Short;
                     xe.Element("date").Value = dateTimePicker1.Text.Substring(0, dateTimePicker1.Text.Length - 5);
@@ -45,12 +57,29 @@ namespace BirthdayCalendar
                 }
             }
             xdoc.Save(path);
+            frame.Show();
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+            frame.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            XDocument xdoc = XDocument.Load(path);
+            XElement root = xdoc.Element("persons");
+
+            foreach (XElement xe in root.Elements("person").ToList())
+            {
+                if(xe.Element("name").Value == fullName.Text)
+                {
+                    xe.Remove();
+                    xe.Save(path);
+                }
+            }
         }
     }
 }
