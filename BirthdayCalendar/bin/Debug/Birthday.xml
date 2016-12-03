@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<persons>
+  <person name="Pan">
+    <date>03.12</date>
+  </person>
+  <person name="Виталий Панченко">
+    <date>25.04</date>
+  </person>
+</persons>
