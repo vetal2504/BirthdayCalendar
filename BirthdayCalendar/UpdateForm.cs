@@ -14,13 +14,10 @@ namespace BirthdayCalendar
     public partial class UpdateForm : Form
     {
         private string path = String.Empty;
-        private MainFrame frame;
-        public UpdateForm(MainFrame frame, string path)
+        public UpdateForm(string path)
         {
             InitializeComponent();
-            this.frame = frame;
             this.path = path;
-            frame.Hide();
 
             XDocument xdoc = XDocument.Load(path);
             XElement root = xdoc.Element("persons");
@@ -49,7 +46,7 @@ namespace BirthdayCalendar
                     xe.Element("name").Value = newFullName.Text;
 
                     dateTimePicker1.Format = DateTimePickerFormat.Short;
-                    xe.Element("date").Value = dateTimePicker1.Text.Substring(0, dateTimePicker1.Text.Length - 5);
+                    xe.Element("date").Value = dateTimePicker1.Value.ToShortDateString();
                 }
                 else
                 {
@@ -57,14 +54,12 @@ namespace BirthdayCalendar
                 }
             }
             xdoc.Save(path);
-            frame.Show();
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            frame.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

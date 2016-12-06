@@ -10,12 +10,10 @@ namespace BirthdayCalendar
         private string path = string.Empty;
         private MainFrame frame;
 
-        public ShowBirthday(MainFrame frame, string path)
+        public ShowBirthday(string path)
         {
             InitializeComponent();
-            this.frame = frame;
             this.path = path;
-            frame.Hide();
             try
             {
                 XDocument xdoc = XDocument.Load(path);
@@ -45,7 +43,6 @@ namespace BirthdayCalendar
         private void button_back_Click(object sender, EventArgs e)
         {
             this.Close();
-            frame.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

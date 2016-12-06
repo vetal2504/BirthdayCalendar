@@ -75,6 +75,7 @@
             // button_back
             // 
             this.button_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button_back.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_back.Location = new System.Drawing.Point(19, 137);
             this.button_back.Name = "button_back";
             this.button_back.Size = new System.Drawing.Size(75, 23);
@@ -87,6 +88,7 @@
             // 
             this.button_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_add.AutoSize = true;
+            this.button_add.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button_add.Location = new System.Drawing.Point(278, 143);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(75, 23);

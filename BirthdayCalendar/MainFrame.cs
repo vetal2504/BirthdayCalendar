@@ -43,16 +43,16 @@ namespace BirthdayCalendar
                     switch (i)
                     {
                         case 0:
-                            ShowBirthday show = new ShowBirthday(this, path);
-                            show.Show();
+                            ShowBirthday show = new ShowBirthday(path);
+                            show.ShowDialog();
                             break;
                         case 1:
-                            AddBirthday add = new AddBirthday(this, path);
-                            add.Show();
+                            AddBirthday add = new AddBirthday(path);
+                            add.ShowDialog();
                             break;
                         case 2:
-                            UpdateForm update = new UpdateForm(this, path);
-                            update.Show();
+                            UpdateForm update = new UpdateForm(path);
+                            update.ShowDialog();
                             break;
                     }
                 }

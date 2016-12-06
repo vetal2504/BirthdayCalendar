@@ -56,9 +56,12 @@ namespace BirthdayCalendar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             AddBirthday frame = new AddBirthday(path);
-            frame.Show();
+            if(frame.ShowDialog() == DialogResult.OK)
+            {
+                frame.addData(frame.Date);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -68,8 +71,8 @@ namespace BirthdayCalendar
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new MainFrame().Show();
+            MainFrame frame = new MainFrame();
+            frame.ShowDialog();
         }
     }
 }

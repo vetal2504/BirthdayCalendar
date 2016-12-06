@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <persons>
   <person id="0">
-    <date>25.04</date>
-    <name>Panchenko Vitaly</name>
+    <date>6 декабря 20</date>
+    <name>Vetal</name>
+  </person>
+  <person id="1">
+    <date>6 декабря 20</date>
+    <name>Qwerty</name>
   </person>
 </persons>

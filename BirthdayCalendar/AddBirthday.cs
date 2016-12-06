@@ -16,39 +16,32 @@ namespace BirthdayCalendar
     public partial class AddBirthday : Form
     {
         private string path = String.Empty;
-        private MainFrame frame;
+        //private MainFrame frame;
 
         public AddBirthday(string path)
         {
             InitializeComponent();
             this.path = path;
-            frame = new MainFrame();
-        }
-
-        public AddBirthday(MainFrame frame, string path)
-        {
-            InitializeComponent();
-            this.path = path;
-            this.frame = frame;
-            frame.Hide();
+            //this.frame = frame;
+            //frame.Hide();
         }
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            string date = dateTimePicker1.Text.Substring(0, dateTimePicker1.Text.Length - 5);
-            addData(date);
+            //dateTimePicker1.Format = DateTimePickerFormat.Short;
+            //string date = dateTimePicker1.Text.Substring(0, dateTimePicker1.Text.Length - 5);
+            //addData();
             this.Close();
-            frame.Show();
+            //frame.Show();
         }
 
         private void button_back_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frame.Show();
+            //this.Close();
+            //frame.Show();
         }
 
-        private void addData(string date)
+        public void addData(string date)
         {
             int countPerson = 0;
             XDocument xdoc = XDocument.Load(path);
@@ -78,6 +71,16 @@ namespace BirthdayCalendar
             userElem.AppendChild(nameElem);
             xRoot.AppendChild(userElem);
             xDoc.Save("Birthday.xml");
+        }
+
+        public string Date
+        {
+            get
+            {
+                dateTimePicker1.Format = DateTimePickerFormat.Short;
+                string date = dateTimePicker1.Text.Substring(0, dateTimePicker1.Text.Length - 5);
+                return date;
+            }
         }
     }
 }
